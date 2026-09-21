@@ -1,0 +1,2 @@
+{"by": "system", "from": "agent", "reason": "unexpected dialog on screen: 'Supervisor Override Required'", "step": "s4", "to": "human", "ts": "2026-09-20T22:54:56+00:00"}
+{"by": "operator", "from": "human", "reason": "operator resolved supervisor override", "step": "s4", "to": "agent", "ts": "2026-09-20T22:54:56+00:00"}

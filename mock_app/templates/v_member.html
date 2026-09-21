@@ -1,0 +1,30 @@
+<h2><font face="Tahoma" size="3">{{ tenant.headings.member }}</font></h2>
+<h3><font face="Tahoma" size="2">Member {{ member_id }} &mdash; {{ member.name }}</font></h3>
+<table border="0" cellpadding="3" cellspacing="0">
+  <tr>
+    <td><font face="Tahoma" size="2">Status</font></td>
+    <td><font face="Tahoma" size="2"><b>{{ member.status }}</b></font></td>
+    <td width="30">&nbsp;</td>
+    <td><font face="Tahoma" size="2">Branch</font></td>
+    <td><font face="Tahoma" size="2"><b>{{ member.branch }}</b></font></td>
+  </tr>
+</table>
+<br>
+<table border="1" cellpadding="4" cellspacing="0" bordercolor="#808080">
+  <tr bgcolor="#ece9d8">
+    <td><font face="Tahoma" size="2"><b>Account Type</b></font></td>
+    <td><font face="Tahoma" size="2"><b>Account Number</b></font></td>
+    <td><font face="Tahoma" size="2"><b>Available Balance</b></font></td>
+  </tr>
+  {% for a in member.accounts %}
+  <tr>
+    <td><font face="Tahoma" size="2">{{ a.type }}</font></td>
+    <td><font face="Tahoma" size="2">{{ a.number }}</font></td>
+    <td align="right"><font face="Tahoma" size="2">{{ a.balance }}</font></td>
+  </tr>
+  {% endfor %}
+</table>
+<br>
+<table border="0" cellpadding="4"><tr><td>
+  <a href="/members/{{ member_id }}/subaccount/new" target="_top"><font face="Tahoma" size="2">{{ tenant.labels.open_subaccount_button }}</font></a>
+</td></tr></table>

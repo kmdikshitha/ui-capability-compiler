@@ -1,0 +1,8 @@
+
+status: success   exit 0
+outputs: {
+  "confirmation_number": "CNF-100042",
+  "new_account_number": "SV-9001"
+}
+max locator rung used: label_adjacent
+evidence: runs/replay-20260921T055151

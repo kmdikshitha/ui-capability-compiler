@@ -1,0 +1,103 @@
+# Tenant B runs the same vendor product as the base recording, branded and
+# configured differently. Rather than re-record the capability, this patch
+# describes only what is mechanically different here.
+#
+# Everything in this file is mechanics: which control to find, what to assert
+# after clicking it, and one extra step this institution inserts. The contract
+# -- inputs, outputs, success condition, declared business outcomes -- is
+# untouched, and apply_override recomputes the contract hash and refuses the
+# merge if it moved.
+
+tenant_variant: community
+
+steps:
+  # s3 and s5 were missing from the first version of this file. Both still
+  # passed, because the ladder quietly fell through to the ordinal rung and the
+  # right control happened to be in the right position. Rung telemetry is what
+  # surfaced them -- the run was green and drifting.
+  s3:
+    target:
+      primary:
+        strategy: role_name
+        role: button
+        name: Log On
+      fallbacks:
+        - strategy: ordinal
+          role: button
+          index: 0
+      rationale: >-
+        This tenant labels the sign-on control "Log On". Named targeting keeps
+        the step off the ordinal rung, where it would survive by position alone.
+
+  s5:
+    target:
+      primary:
+        strategy: role_name
+        role: button
+        name: Find Member
+        frame_path: [shell, workarea]
+      fallbacks:
+        - strategy: ordinal
+          role: button
+          index: 0
+          frame_path: [shell, workarea]
+      rationale: >-
+        The member search control is labelled "Find Member" here.
+
+  s6:
+    target:
+      primary:
+        strategy: role_name
+        role: link
+        name: New Sub-Account
+        frame_path: [shell, workarea]
+      fallbacks:
+        - strategy: ordinal
+          role: link
+          index: 1
+          frame_path: [shell, workarea]
+      rationale: >-
+        This institution labels the same control "New Sub-Account". The ordinal
+        fallback is kept so a further rename degrades rather than breaks.
+    checkpoint:
+      type: element_visible
+      role: heading
+      name: Add Sub-Account
+
+  s10:
+    target:
+      primary:
+        strategy: role_name
+        role: button
+        name: Continue
+        frame_path: [shell, workarea]
+      rationale: >-
+        The submit control is labelled "Continue" here because this tenant
+        posts the account on a later screen rather than on this one.
+    checkpoint:
+      type: element_visible
+      role: heading
+      name: Acknowledgement Required
+
+# This tenant requires the operator to acknowledge a disclosure before the
+# sub-account is posted. A step list is mechanics, so an override may add one.
+insert_steps:
+  - after: s10
+    step:
+      id: s10a
+      action: click
+      risk: irreversible
+      note: tenant-specific disclosure acknowledgement
+      target:
+        primary:
+          strategy: role_name
+          role: button
+          name: Acknowledge
+          frame_path: [shell, workarea]
+        rationale: >-
+          The acknowledgement gate exists only at this tenant; it is a step, not
+          a different outcome, so it lives in the override rather than the base.
+      checkpoint:
+        type: element_visible
+        role: heading
+        name: Sub-Account Confirmation

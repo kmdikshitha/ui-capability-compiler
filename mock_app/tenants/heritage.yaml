@@ -1,0 +1,19 @@
+# Tenant A — the base variant the capability is recorded against.
+tenant_id: heritage
+brand: Heritage Credit Union
+brand_short: Heritage CU
+app_title: Member Services
+labels:
+  search_button: Search
+  open_subaccount_button: Open Sub-Account
+  submit_button: Create Sub-Account
+  confirm_button: Confirm
+  dismiss_button: Dismiss
+  signin_button: Sign In
+headings:
+  search: Member Search
+  member: Member Services
+  subaccount_new: New Sub-Account
+  subaccount_confirm: Sub-Account Confirmation
+# One extra acknowledgement screen before the confirmation page.
+extra_confirmation: false

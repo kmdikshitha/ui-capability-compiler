@@ -1,0 +1,66 @@
+{
+  "capability_id": "member.open_subaccount",
+  "failure": {
+    "evidence_dir": "replay-20260921T055154",
+    "expected": "textbox \"Member ID\" (via role_name)",
+    "observed": "ladder exhausted after ['role_name', 'ordinal']; url=http://localhost:8000/search heading='Session Expired' text='Heritage Credit Union Teller OP-4471 | Term 0042 | SERVICING Member Search Transactions Card Services Reports | Session Expired Your session has timed out. For your security this s'",
+    "step_id": "s4"
+  },
+  "max_rung_used": "role_name",
+  "outcome": null,
+  "outputs": null,
+  "recoveries": [],
+  "run_id": "replay-20260921T055154",
+  "status": "failed",
+  "steps": [
+    {
+      "action": "navigate",
+      "attempted_rungs": [],
+      "checkpoint_ok": null,
+      "duration_ms": 23,
+      "note": null,
+      "rung_used": null,
+      "screenshot_path": null,
+      "step_id": "s1"
+    },
+    {
+      "action": "type",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 60,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s2"
+    },
+    {
+      "action": "click",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 64,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s3"
+    },
+    {
+      "action": "type",
+      "attempted_rungs": [
+        "role_name",
+        "ordinal"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 1323,
+      "note": null,
+      "rung_used": null,
+      "screenshot_path": "runs/replay-20260921T055154/screenshots/fail-s4.png",
+      "step_id": "s4"
+    }
+  ],
+  "tenant_variant": "base",
+  "version": 1
+}

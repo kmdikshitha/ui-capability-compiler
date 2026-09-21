@@ -1,0 +1,4 @@
+{"action":"navigate","attempted_rungs":[],"checkpoint_ok":null,"duration_ms":23,"note":null,"rung_used":null,"screenshot_path":null,"step_id":"s1"}
+{"action":"type","attempted_rungs":["role_name"],"checkpoint_ok":null,"duration_ms":60,"note":null,"rung_used":"role_name","screenshot_path":null,"step_id":"s2"}
+{"action":"click","attempted_rungs":["role_name"],"checkpoint_ok":null,"duration_ms":64,"note":null,"rung_used":"role_name","screenshot_path":null,"step_id":"s3"}
+{"action":"type","attempted_rungs":["role_name","ordinal"],"checkpoint_ok":null,"duration_ms":1323,"note":null,"rung_used":null,"screenshot_path":"runs/replay-20260921T055154/screenshots/fail-s4.png","step_id":"s4"}

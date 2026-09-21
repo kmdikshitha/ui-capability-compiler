@@ -1,0 +1,16 @@
+# Enforced by src/guardrails/allowlist.py on EVERY action, in discovery and replay.
+# Discovery is the more dangerous of the two: an LLM is exploring freely.
+origins:
+  - http://localhost:8000
+  - http://127.0.0.1:8000
+paths:
+  - ^/$
+  - ^/login$
+  - ^/search$
+  - ^/members/\d+$
+  - ^/members/\d+/subaccount/(new|confirm)$
+  - ^/frame/workarea$
+  - ^/frame/.*$
+actions: [click, type, navigate, read, select]
+deny_paths:
+  - ^/admin/

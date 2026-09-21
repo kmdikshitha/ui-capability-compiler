@@ -1,0 +1,36 @@
+<h2><font face="Tahoma" size="3">{{ tenant.headings.subaccount_new }}</font></h2>
+<h3><font face="Tahoma" size="2">Member {{ member_id }} &mdash; {{ member.name }}</font></h3>
+<form action="/members/{{ member_id }}/subaccount/new" method="post" target="_top">
+<table border="0" cellpadding="5" cellspacing="0">
+  {#
+    These controls carry NO accessible name on purpose: the label is plain <td>
+    text to the left, exactly as a legacy ASP.NET table layout renders it.
+    This is what forces label_adjacent targeting on rung 2 of the ladder.
+  #}
+  <tr>
+    <td width="130"><font face="Tahoma" size="2">Account Type</font></td>
+    <td>
+      <select name="account_type" id="ctl00_{{ rid() }}_ddlAcctType">
+        {% for t in account_types %}<option value="{{ t }}">{{ t }}</option>{% endfor %}
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td><font face="Tahoma" size="2">Initial Deposit</font></td>
+    <td><input type="text" name="initial_deposit" size="14" value="" id="ctl00_{{ rid() }}_txtDeposit"></td>
+  </tr>
+  <tr>
+    <td><font face="Tahoma" size="2">Nickname</font></td>
+    <td><input type="text" name="nickname" size="24" value="" id="ctl00_{{ rid() }}_txtNickname"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" value="{{ tenant.labels.submit_button }}" id="ctl00_{{ rid() }}_btnCreate"></td>
+  </tr>
+</table>
+</form>
+{% if error %}
+<table border="0" cellpadding="6"><tr><td bgcolor="#ffe8e8">
+  <font face="Tahoma" size="2" color="#aa0000"><b>{{ error }}</b></font>
+</td></tr></table>
+{% endif %}

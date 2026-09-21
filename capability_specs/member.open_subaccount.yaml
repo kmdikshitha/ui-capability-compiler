@@ -1,0 +1,93 @@
+# The business half of the capability contract.
+#
+# The model discovers the mechanics. A human declares which outcomes matter,
+# because "no such member is a legitimate answer, not a crash" is a product
+# decision and is not observable from one happy-path run. The compiler reads
+# this file, derives everything else from the transcript, and emits the artifact.
+
+capability_id: member.open_subaccount
+target_app: cu-core
+description: >-
+  Look up a member by id and open a new sub-account for them, reaching the
+  confirmation screen. Returns the confirmation number and the new account
+  number.
+
+goal: >-
+  Sign in to the teller console, look up member {{ inputs.member_id }}, and open a
+  new {{ inputs.account_type }} sub-account for them with an initial deposit of
+  {{ inputs.initial_deposit }} and the nickname "{{ inputs.nickname }}".
+  Continue until you reach the confirmation screen, then report the confirmation
+  number and the new account number.
+
+inputs:
+  - name: member_id
+    type: string
+    required: true
+    sensitive: true          # never written verbatim to disk
+    description: Core member identifier.
+  - name: account_type
+    type: string
+    required: true
+    description: One of Savings, Checking, Money Market, Certificate.
+  - name: initial_deposit
+    type: money
+    required: true
+    description: Opening balance for the new sub-account.
+  - name: nickname
+    type: string
+    required: false
+    description: Operator-facing label for the sub-account.
+
+# Names and types are declared here; the compiler derives how to extract each
+# one by locating the value the model reported at finish() in the final
+# observation.
+outputs:
+  - name: confirmation_number
+    type: string
+    description: Posting reference for the opened sub-account.
+  - name: new_account_number
+    type: string
+    description: Account number assigned to the new sub-account.
+
+business_outcomes:
+  - name: member_not_found
+    description: The member id is not present in the core. A legitimate answer.
+    detect:
+      type: text_present
+      text: No record found
+    returns:
+      reason: member id not present in core
+  - name: permission_denied
+    description: The operator may not service this account.
+    detect:
+      type: text_present
+      text: You do not have permission to service this account
+    returns:
+      reason: operator lacks servicing permission for this member
+
+recoverable:
+  - name: maintenance_banner
+    description: A scheduled-maintenance interstitial that a human would simply dismiss.
+    detect:
+      type: text_present
+      text: Scheduled Maintenance
+    max_attempts: 2
+    recover:
+      - id: r1
+        action: click
+        risk: reversible
+        target:
+          primary:
+            strategy: role_name
+            role: link
+            name: Dismiss
+            frame_path: [shell, workarea]
+          fallbacks:
+            - strategy: ordinal
+              role: link
+              index: 1
+              frame_path: [shell, workarea]
+          rationale: >-
+            The interstitial's dismiss control is the only named link in the work
+            area; falling back to ordinal keeps the recovery working if the
+            tenant renames it.

@@ -1,0 +1,7 @@
+
+status: failed   exit 1
+failed at s4
+  expected: textbox "Member ID" (via role_name)
+  observed: ladder exhausted after ['role_name', 'ordinal']; url=http://localhost:8000/search heading='Session Expired' text='Heritage Credit Union Teller OP-4471 | Term 0042 | SERVICING Member Search Transactions Card Services Reports | Session Expired Your session has timed out. For your security this s'
+max locator rung used: role_name
+evidence: runs/replay-20260921T055154

@@ -1,0 +1,10 @@
+
+status: success   exit 0
+outputs: {
+  "confirmation_number": "CNF-100043",
+  "new_account_number": "SV-9002"
+}
+recoveries applied: maintenance_banner
+max locator rung used: label_adjacent
+evidence: runs/replay-20260921T055156
+INFO replay: recovering from maintenance_banner (attempt 1)

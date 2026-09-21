@@ -1,0 +1,21 @@
+<h2><font face="Tahoma" size="3">{{ tenant.headings.search }}</font></h2>
+<form action="/search" method="get" target="_top">
+<table border="0" cellpadding="5" cellspacing="0">
+  <tr>
+    <td width="110"><font face="Tahoma" size="2">Member ID</font></td>
+    <td><input type="text" name="member_id" size="20" value="{{ member_id or '' }}"
+               id="ctl00_{{ rid() }}_txtMemberId" aria-label="Member ID"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" value="{{ tenant.labels.search_button }}" id="ctl00_{{ rid() }}_btnSearch"></td>
+  </tr>
+</table>
+</form>
+{% if error %}
+<table border="0" cellpadding="6"><tr><td bgcolor="#ffe8e8">
+  <font face="Tahoma" size="2" color="#aa0000"><b>{{ error }}</b></font>
+</td></tr></table>
+{% endif %}
+<br>
+<font face="Tahoma" size="1">Enter a member ID to begin servicing.</font>

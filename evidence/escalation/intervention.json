@@ -1,0 +1,15 @@
+{
+  "capability_id": "member.open_subaccount",
+  "cdp_url": "http://localhost:9223",
+  "created_at": "2026-09-20T22:54:56+00:00",
+  "goal": "Look up a member by id and open a new sub-account for them, reaching the confirmation screen. Returns the confirmation number and the new account number.",
+  "id": "escalation",
+  "reason": "unexpected dialog on screen: 'Supervisor Override Required'",
+  "risk": "reversible",
+  "run_id": "escalation",
+  "screenshot_path": "/Users/Shared/Files From h.localized/DIkshitha/ui-capability-compiler/runs/escalation/screenshots/intervention-s4.png",
+  "status": "resumed",
+  "step_id": "s4",
+  "url": "http://localhost:8000/search",
+  "version": 1
+}

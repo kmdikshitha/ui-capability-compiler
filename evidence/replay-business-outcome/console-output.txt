@@ -1,0 +1,9 @@
+
+status: business_outcome   exit 3
+outcome: member_not_found
+outputs: {
+  "reason": "member id not present in core"
+}
+max locator rung used: role_name
+evidence: runs/replay-20260921T055152
+INFO replay: business outcome member_not_found at s6

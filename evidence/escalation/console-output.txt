@@ -1,0 +1,16 @@
+escalating at s4: unexpected dialog on screen: 'Supervisor Override Required'
+   [agent]    paused at s4: unexpected dialog on screen: 'Supervisor Override Required'
+   [agent]    browser stays open; waiting for control back...
+   [operator] picked up request: unexpected dialog on screen: 'Supervisor Override Required'
+   [operator] attached over CDP, sees: http://localhost:8000/search
+   [operator] entered the override code the agent could not
+   [operator] dialog resolved, now on: http://localhost:8000/search
+   [operator] handed control back
+   [agent]    control returned: True
+
+   final status: success  exit 0
+   outputs: {'confirmation_number': 'CNF-100042', 'new_account_number': 'SV-9001'}
+
+   control.jsonl (the transport, not just a log):
+     agent  -> human   by system   at s4  (unexpected dialog on screen: 'Supervisor Override Required')
+     human  -> agent   by operator at s4  (operator resolved supervisor override)

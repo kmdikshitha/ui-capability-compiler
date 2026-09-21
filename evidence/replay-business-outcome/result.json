@@ -1,0 +1,74 @@
+{
+  "capability_id": "member.open_subaccount",
+  "failure": null,
+  "max_rung_used": "role_name",
+  "outcome": "member_not_found",
+  "outputs": {
+    "reason": "member id not present in core"
+  },
+  "recoveries": [],
+  "run_id": "replay-20260921T055152",
+  "status": "business_outcome",
+  "steps": [
+    {
+      "action": "navigate",
+      "attempted_rungs": [],
+      "checkpoint_ok": null,
+      "duration_ms": 24,
+      "note": null,
+      "rung_used": null,
+      "screenshot_path": null,
+      "step_id": "s1"
+    },
+    {
+      "action": "type",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 68,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s2"
+    },
+    {
+      "action": "click",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 58,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s3"
+    },
+    {
+      "action": "type",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 42,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s4"
+    },
+    {
+      "action": "click",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 66,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s5"
+    }
+  ],
+  "tenant_variant": "base",
+  "version": 1
+}

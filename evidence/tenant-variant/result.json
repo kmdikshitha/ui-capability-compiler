@@ -1,0 +1,147 @@
+{
+  "capability_id": "member.open_subaccount",
+  "failure": null,
+  "max_rung_used": "label_adjacent",
+  "outcome": null,
+  "outputs": {
+    "confirmation_number": "CNF-100042",
+    "new_account_number": "SV-9001"
+  },
+  "recoveries": [],
+  "run_id": "replay-20260921T055211",
+  "status": "success",
+  "steps": [
+    {
+      "action": "navigate",
+      "attempted_rungs": [],
+      "checkpoint_ok": null,
+      "duration_ms": 24,
+      "note": null,
+      "rung_used": null,
+      "screenshot_path": null,
+      "step_id": "s1"
+    },
+    {
+      "action": "type",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 60,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s2"
+    },
+    {
+      "action": "click",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 64,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s3"
+    },
+    {
+      "action": "type",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 42,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s4"
+    },
+    {
+      "action": "click",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 64,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s5"
+    },
+    {
+      "action": "click",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": true,
+      "duration_ms": 93,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s6"
+    },
+    {
+      "action": "select",
+      "attempted_rungs": [
+        "label_adjacent"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 16,
+      "note": null,
+      "rung_used": "label_adjacent",
+      "screenshot_path": null,
+      "step_id": "s7"
+    },
+    {
+      "action": "type",
+      "attempted_rungs": [
+        "label_adjacent"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 14,
+      "note": null,
+      "rung_used": "label_adjacent",
+      "screenshot_path": null,
+      "step_id": "s8"
+    },
+    {
+      "action": "type",
+      "attempted_rungs": [
+        "label_adjacent"
+      ],
+      "checkpoint_ok": null,
+      "duration_ms": 14,
+      "note": null,
+      "rung_used": "label_adjacent",
+      "screenshot_path": null,
+      "step_id": "s9"
+    },
+    {
+      "action": "click",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": true,
+      "duration_ms": 94,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s10"
+    },
+    {
+      "action": "click",
+      "attempted_rungs": [
+        "role_name"
+      ],
+      "checkpoint_ok": true,
+      "duration_ms": 107,
+      "note": null,
+      "rung_used": "role_name",
+      "screenshot_path": null,
+      "step_id": "s10a"
+    }
+  ],
+  "tenant_variant": "community",
+  "version": 1
+}

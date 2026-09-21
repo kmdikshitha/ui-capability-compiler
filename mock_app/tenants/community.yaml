@@ -1,0 +1,19 @@
+# Tenant B — same vendor product, configured and branded differently.
+# Same templates, different config. Exercises base-artifact + override reuse.
+tenant_id: community
+brand: Community First Federal Credit Union
+brand_short: Community First FCU
+app_title: Servicing Console
+labels:
+  search_button: Find Member
+  open_subaccount_button: New Sub-Account
+  submit_button: Continue
+  confirm_button: Confirm and Post
+  dismiss_button: Close
+  signin_button: Log On
+headings:
+  search: Find a Member
+  member: Servicing Console
+  subaccount_new: Add Sub-Account
+  subaccount_confirm: Sub-Account Confirmation
+extra_confirmation: true

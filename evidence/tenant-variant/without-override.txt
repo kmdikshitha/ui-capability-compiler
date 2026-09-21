@@ -1,0 +1,7 @@
+
+status: failed   exit 1
+failed at s6
+  expected: heading "New Sub-Account" visible
+  observed: url=http://localhost:8000/members/MEMB_****21/subaccount/new heading='Add Sub-Account' text='Community First Federal Credit Union Teller OP-4471 | Term 0042 | SERVICING Member Search Transactions Card Services Reports | Add Sub-Account Member MEMB_****21 — E. Castellano Account '
+max locator rung used: ordinal
+evidence: runs/replay-20260921T055200

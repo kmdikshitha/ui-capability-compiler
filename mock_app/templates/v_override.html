@@ -1,0 +1,30 @@
+{# An undeclared blocking dialog. The capability artifact says nothing about
+   this screen on purpose: it is what the escalation path exists for. A human
+   takes the live session, enters the code, and hands control back. #}
+<div role="dialog" aria-label="Supervisor Override Required">
+<h2><font face="Tahoma" size="3">Supervisor Override Required</font></h2>
+<table border="1" cellpadding="8" cellspacing="0" bordercolor="#808080">
+<tr><td bgcolor="#fff8dc">
+  <font face="Tahoma" size="2">
+  This member's profile is flagged for supervisory review. A supervisor override
+  code is required before servicing can continue.
+  </font>
+</td></tr>
+</table>
+<br>
+<form action="/frame/workarea" method="get">
+  {% for key, value in passthrough.items() %}
+  <input type="hidden" name="{{ key }}" value="{{ value }}">
+  {% endfor %}
+  <table border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td width="130"><font face="Tahoma" size="2">Override Code</font></td>
+      <td><input type="text" name="override_code" size="16" id="ctl00_{{ rid() }}_txtOverride"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" value="Approve" id="ctl00_{{ rid() }}_btnApprove"></td>
+    </tr>
+  </table>
+</form>
+</div>

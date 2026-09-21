@@ -1,0 +1,10 @@
+{"action":"navigate","attempted_rungs":[],"checkpoint_ok":null,"duration_ms":26,"note":null,"rung_used":null,"screenshot_path":null,"step_id":"s1"}
+{"action":"type","attempted_rungs":["role_name"],"checkpoint_ok":null,"duration_ms":65,"note":null,"rung_used":"role_name","screenshot_path":null,"step_id":"s2"}
+{"action":"click","attempted_rungs":["role_name"],"checkpoint_ok":null,"duration_ms":67,"note":null,"rung_used":"role_name","screenshot_path":null,"step_id":"s3"}
+{"action":"type","attempted_rungs":["role_name"],"checkpoint_ok":null,"duration_ms":38,"note":null,"rung_used":"role_name","screenshot_path":null,"step_id":"s4"}
+{"action":"click","attempted_rungs":["role_name"],"checkpoint_ok":null,"duration_ms":79,"note":null,"rung_used":"role_name","screenshot_path":null,"step_id":"s5"}
+{"action":"click","attempted_rungs":["role_name"],"checkpoint_ok":true,"duration_ms":126,"note":null,"rung_used":"role_name","screenshot_path":null,"step_id":"s6"}
+{"action":"select","attempted_rungs":["label_adjacent"],"checkpoint_ok":null,"duration_ms":17,"note":null,"rung_used":"label_adjacent","screenshot_path":null,"step_id":"s7"}
+{"action":"type","attempted_rungs":["label_adjacent"],"checkpoint_ok":null,"duration_ms":17,"note":null,"rung_used":"label_adjacent","screenshot_path":null,"step_id":"s8"}
+{"action":"type","attempted_rungs":["label_adjacent"],"checkpoint_ok":null,"duration_ms":14,"note":null,"rung_used":"label_adjacent","screenshot_path":null,"step_id":"s9"}
+{"action":"click","attempted_rungs":["role_name"],"checkpoint_ok":true,"duration_ms":111,"note":null,"rung_used":"role_name","screenshot_path":null,"step_id":"s10"}

@@ -1,0 +1,17 @@
+{# Tenant variant only: an extra acknowledgement gate before the confirmation
+   screen. Same URL as the confirmation page, so routes stay identical across
+   tenants -- what differs is the number of steps, which is mechanics. #}
+<h2><font face="Tahoma" size="3">Acknowledgement Required</font></h2>
+<table border="0" cellpadding="6"><tr><td bgcolor="#fff8dc">
+  <font face="Tahoma" size="2">
+  This institution requires the operator to acknowledge the sub-account disclosure
+  before the account is posted.
+  </font>
+</td></tr></table>
+<br>
+<form action="/members/{{ member_id }}/subaccount/confirm" method="post" target="_top">
+<input type="hidden" name="ack" value="1">
+<table border="0" cellpadding="4"><tr><td>
+  <input type="submit" value="Acknowledge" id="ctl00_{{ rid() }}_btnAck">
+</td></tr></table>
+</form>

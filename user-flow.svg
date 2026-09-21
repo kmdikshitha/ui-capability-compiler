@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="User flow: an AI agent needs a task done in an app with no API. If no capability is recorded, an LLM discovery run compiles one and a human approves it. Otherwise typed inputs go straight to deterministic replay, which ends in success, a business outcome, a bounded recovery, a hard failure, or escalation to a human who takes over the same live browser and hands control back.">
+<style>
+  text { font-family:'IBM Plex Sans','Helvetica Neue',Helvetica,'Liberation Sans',Arial,sans-serif; fill:#141922; }
+  .mono { font-family:'IBM Plex Mono','DejaVu Sans Mono',monospace; }
+  .m { fill:#5D6875; }
+  .arrow { stroke:#141922; stroke-width:2.4; fill:none; }
+  .dash { stroke:#5D6875; stroke-width:2.4; fill:none; stroke-dasharray:9 6; }
+  .band { fill:#F5F7FA; stroke:#C4CCD6; stroke-width:2; }
+</style>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#141922"/></marker>
+  <marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5D6875"/></marker>
+</defs>
+<rect x="0" y="0" width="1920" height="1080" fill="#FFFFFF"/>
+
+<rect x="470" y="150" width="880" height="220" rx="8" fill="#FDF7EC" stroke="#8F5400" stroke-width="2" stroke-dasharray="10 6"/>
+<text x="494" y="188" font-size="21" font-weight="700" fill="#8F5400" letter-spacing="1.6">DISCOVERY</text>
+<text x="659" y="188" font-size="17" class="m">runs once  ·  LLM in the loop</text>
+<rect x="910" y="450" width="730" height="220" rx="8" fill="#EDF8F6" stroke="#0A645D" stroke-width="2" stroke-dasharray="10 6"/>
+<text x="934" y="488" font-size="21" font-weight="700" fill="#0A645D" letter-spacing="1.6">REPLAY</text>
+<text x="1052" y="488" font-size="17" class="m">every call after  ·  no model</text>
+<rect x="30" y="510" width="220" height="100" rx="50.0" fill="#EEF1F5" stroke="#5D6875" stroke-width="2.6"/>
+<text x="140" y="553" font-size="18" class="" text-anchor="middle">Task needed in</text>
+<text x="140" y="578" font-size="18" class="" text-anchor="middle">an app with no API</text>
+<polygon points="290,560 390,475 490,560 390,645" fill="#FFFFFF" stroke="#C4CCD6" stroke-width="2.6"/>
+<text x="390" y="552" font-size="19" font-weight="700" class="" text-anchor="middle">Capability</text>
+<text x="390" y="579" font-size="19" class="" text-anchor="middle">recorded?</text>
+<path d="M 252 560 L 286 560" class="arrow" marker-end="url(#a)"/>
+<rect x="490" y="210" width="190" height="100" rx="6" fill="#FAEFDC" stroke="#8F5400" stroke-width="2.6"/>
+<text x="585" y="254" font-size="18" font-weight="700" class="" text-anchor="middle">Goal + target URL</text>
+<text x="585" y="278" font-size="17" class="m" text-anchor="middle">plain-language task</text>
+<rect x="710" y="210" width="190" height="100" rx="6" fill="#FAEFDC" stroke="#8F5400" stroke-width="2.6"/>
+<text x="805" y="242" font-size="21" font-weight="700" class="" text-anchor="middle">Discovery</text>
+<text x="805" y="267" font-size="17" class="" text-anchor="middle">LLM observes,</text>
+<text x="805" y="291" font-size="17" class="" text-anchor="middle">decides, acts</text>
+<rect x="930" y="210" width="190" height="100" rx="6" fill="#FAEFDC" stroke="#8F5400" stroke-width="2.6"/>
+<text x="1025" y="242" font-size="21" font-weight="700" class="" text-anchor="middle">Compile</text>
+<text x="1025" y="267" font-size="17" class="" text-anchor="middle">run → capability</text>
+<text x="1025" y="291" font-size="17" class="" text-anchor="middle">artifact</text>
+<rect x="1150" y="210" width="190" height="100" rx="6" fill="#FAEFDC" stroke="#8F5400" stroke-width="2.6"/>
+<text x="1245" y="254" font-size="19" font-weight="700" class="" text-anchor="middle">Human review</text>
+<text x="1245" y="278" font-size="17" class="m" text-anchor="middle">draft → approved</text>
+<path d="M 680 260 L 706 260" class="arrow" marker-end="url(#a)"/>
+<path d="M 900 260 L 926 260" class="arrow" marker-end="url(#a)"/>
+<path d="M 1120 260 L 1146 260" class="arrow" marker-end="url(#a)"/>
+<path d="M 390 473 L 390 260 L 486 260" class="arrow" marker-end="url(#a)"/>
+<text x="404" y="372" font-size="17" class="m" text-anchor="start">no — first time</text>
+<path d="M 492 560 L 926 560" class="arrow" marker-end="url(#a)"/>
+<text x="709" y="546" font-size="17" class="m" text-anchor="middle">yes — every call after</text>
+<rect x="930" y="510" width="190" height="100" rx="6" fill="#D9EFEC" stroke="#0A645D" stroke-width="2.6"/>
+<text x="1025" y="555" font-size="19" font-weight="700" class="" text-anchor="middle">Typed inputs</text>
+<text x="1025" y="577" font-size="15" class="mono m" text-anchor="middle">member_id=54321</text>
+<rect x="1380" y="500" width="240" height="120" rx="6" fill="#D9EFEC" stroke="#0A645D" stroke-width="2.6"/>
+<text x="1500" y="544" font-size="24" font-weight="700" class="" text-anchor="middle">Replay</text>
+<text x="1500" y="568" font-size="17" class="" text-anchor="middle">walk the saved steps</text>
+<text x="1500" y="591" font-size="16" font-style="italic" fill="#0A645D" class="" text-anchor="middle">no model in the loop</text>
+<path d="M 1122 560 L 1376 560" class="arrow" marker-end="url(#a)"/>
+<path d="M 1340 260 L 1500 260 L 1500 496" class="arrow" marker-end="url(#a)"/>
+<text x="1514" y="392" font-size="17" class="m" text-anchor="start">approved artifact</text>
+<rect x="1690" y="306" width="210" height="84" rx="6" fill="#EEF1F5" stroke="#5D6875" stroke-width="2.6"/>
+<text x="1795" y="342" font-size="20" font-weight="700" class="" text-anchor="middle">Success</text>
+<text x="1795" y="366" font-size="17" class="m" text-anchor="middle">typed outputs</text>
+<path d="M 1622 520 L 1660 520 L 1660 348 L 1686 348" class="arrow" marker-end="url(#a)"/>
+<rect x="1690" y="412" width="210" height="84" rx="6" fill="#EEF1F5" stroke="#5D6875" stroke-width="2.6"/>
+<text x="1795" y="449" font-size="19" font-weight="700" class="" text-anchor="middle">Business outcome</text>
+<text x="1795" y="471" font-size="15" class="mono m" text-anchor="middle">member_not_found</text>
+<path d="M 1622 540 L 1660 540 L 1660 454 L 1686 454" class="arrow" marker-end="url(#a)"/>
+<rect x="1690" y="518" width="210" height="84" rx="6" fill="#D9EFEC" stroke="#0A645D" stroke-width="2.6"/>
+<text x="1795" y="554" font-size="19" font-weight="700" class="" text-anchor="middle">Declared recovery</text>
+<text x="1795" y="578" font-size="17" class="m" text-anchor="middle">retry step · max 2</text>
+<path d="M 1622 560 L 1660 560 L 1660 560 L 1686 560" class="arrow" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="1690" y="624" width="210" height="84" rx="6" fill="#EEF1F5" stroke="#5D6875" stroke-width="2.6"/>
+<text x="1795" y="660" font-size="20" font-weight="700" class="" text-anchor="middle">Hard failure</text>
+<text x="1795" y="684" font-size="17" class="m" text-anchor="middle">expected vs observed</text>
+<path d="M 1622 580 L 1660 580 L 1660 666 L 1686 666" class="arrow" marker-end="url(#a)"/>
+<rect x="1690" y="730" width="210" height="84" rx="6" fill="#F8E1E5" stroke="#94293B" stroke-width="2.6"/>
+<text x="1795" y="766" font-size="20" font-weight="700" class="" text-anchor="middle">Escalate</text>
+<text x="1795" y="790" font-size="17" class="m" text-anchor="middle">intervention request</text>
+<path d="M 1622 600 L 1660 600 L 1660 772 L 1686 772" class="arrow" marker-end="url(#a)"/>
+<rect x="1690" y="860" width="210" height="84" rx="6" fill="#F8E1E5" stroke="#94293B" stroke-width="2.6"/>
+<text x="1795" y="896" font-size="19" font-weight="700" class="" text-anchor="middle">Human takes over</text>
+<text x="1795" y="920" font-size="17" class="m" text-anchor="middle">the same live browser</text>
+<path d="M 1795 816 L 1795 856" class="arrow" marker-end="url(#a)"/>
+<rect x="1380" y="860" width="240" height="84" rx="6" fill="#F8E1E5" stroke="#94293B" stroke-width="2.6"/>
+<text x="1500" y="896" font-size="19" font-weight="700" class="" text-anchor="middle">Control handed back</text>
+<text x="1500" y="920" font-size="17" class="m" text-anchor="middle">re-observe, then resume</text>
+<path d="M 1688 902 L 1624 902" class="arrow" marker-end="url(#a)"/>
+<path d="M 1500 858 L 1500 624" class="arrow" marker-end="url(#a)"/>
+<text x="1514" y="748" font-size="17" class="m" text-anchor="start">resume</text>
+</svg>

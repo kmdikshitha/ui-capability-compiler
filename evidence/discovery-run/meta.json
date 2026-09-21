@@ -1,0 +1,14 @@
+{
+  "capability": "member.open_subaccount",
+  "goal": "Sign in, look up the member, and open a new savings sub-account, reaching the confirmation screen",
+  "inputs": {
+    "account_type": "Savings",
+    "initial_deposit": "***",
+    "member_id": "MEMB_****45",
+    "nickname": "Vacation"
+  },
+  "kind": "discovery",
+  "model": "claude-sonnet-5",
+  "run_id": "discovery-20260920T225150",
+  "target": "http://localhost:8000/login"
+}

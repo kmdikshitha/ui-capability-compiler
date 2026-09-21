@@ -1,0 +1,9 @@
+{
+  "outputs": {
+    "confirmation_number": "CNF-100042",
+    "new_account_number": "SV-9001"
+  },
+  "reason": "Signed in, searched for member MEMB_****45, opened a new Savings sub-account with *** initial deposit and nickname 'Vacation', and reached the confirmation screen showing Confirmation Number CNF-100042 and New Account Number SV-9001.",
+  "status": "finished",
+  "turns": 11
+}

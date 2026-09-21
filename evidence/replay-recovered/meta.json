@@ -1,0 +1,19 @@
+{
+  "attended": false,
+  "capability": "member.open_subaccount",
+  "duration_s": 2.2,
+  "ended_at": "2026-09-21T05:51:58+00:00",
+  "inputs": {
+    "account_type": "Savings",
+    "initial_deposit": "***",
+    "member_id": "MEMB_****21",
+    "nickname": "Holiday"
+  },
+  "kind": "replay",
+  "run_id": "replay-20260921T055156",
+  "started_at": "2026-09-21T05:51:56+00:00",
+  "status": "success",
+  "steps": 10,
+  "tenant": "base",
+  "version": 1
+}
